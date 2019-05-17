@@ -1,0 +1,22 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3000/eureka
+  instance:
+    instance-id: user-1           #此实例注册到Eureka服务端的唯一实例ID
+    prefer-ip-address: true
+spring:
+  application:
+    name: userService             #此实例注册到Eureka服务端的name
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1/demo?useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: 123456
+#    jpa:
+#      hibernate:
+#        ddl-auto: update
+#      show-sql: false
